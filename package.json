@@ -40,7 +40,7 @@
   "main": "index.js",
   "devDependencies": {
     "grunt": "^1.6.1",
-    "uglify": "^0.1.5"
+    "grunt-contrib-uglify": "^5.2.2"
   },
   "repository": {
     "type": "git",
