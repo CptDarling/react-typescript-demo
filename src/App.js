@@ -5,6 +5,14 @@ function Index() {
   return <h2>Home</h2>;
 }
 
+function About() {
+  return <h2>About us</h2>;
+}
+
+function Contact() {
+  return <h2>Contact us</h2>;
+}
+
 function Product({ match }) {
   console.log(match);
   return <h2>This is a page for product with ID: {match.params.id}</h2>;
@@ -17,6 +25,12 @@ function Layout() {
         <ul>
           <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
             <Link to="/products/1">First Product</Link>
@@ -40,6 +54,8 @@ function AppRouter() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<Product />} />
         </Route>
       </Routes>
